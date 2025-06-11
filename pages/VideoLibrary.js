@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './VideoLibrary.css';
 
 const VideoLibrary = () => {
   const [videos, setVideos] = useState([]);
@@ -20,7 +21,7 @@ const VideoLibrary = () => {
   }, []);
 
   return (
-    <div>
+    <div className="video-library">
       <h2>Video Library</h2>
       <div className="video-grid">
         {videos.map(video => (
