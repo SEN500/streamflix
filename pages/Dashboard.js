@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import LogoutButton from '../components/LogoutButton';
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -29,6 +30,7 @@ const Dashboard = () => {
     <div>
       <h1>Welcome, {user.username}</h1>
       <p>Your email: {user.email}</p>
+      <LogoutButton />
     </div>
   );
 };
